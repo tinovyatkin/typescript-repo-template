@@ -16,7 +16,8 @@
   "scripts": {
     "lint": "eslint --ext=ts ./src",
     "test": "jest",
-    "build": "tsc"
+    "build": "tsc",
+    "prepublishOnly": "jest && tsc"
   },
   "devDependencies": {
     "@types/jest": "latest",
