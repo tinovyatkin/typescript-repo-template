@@ -1,0 +1,54 @@
+name: Lint
+
+on:
+  pull_request:
+    paths:
+      - 'src/**/*.ts'
+      - '**eslint**'
+      - 'yarn.lock'
+      - '.github/workflows/eslint-source.yml'
+jobs:
+  eslint:
+    name: ESLint
+    runs-on: ubuntu-latest
+    env:
+      HUSKY_SKIP_INSTALL: true
+      FORCE_COLOR: 2
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          fetch-depth: 1
+
+      - name: Get Node.JS version from package.json
+        id: get-versions
+        run: echo ::set-output name=node::$(jq -r .engines.node ./package.json)
+
+      - uses: actions/setup-node@v1
+        with:
+          node-version: ${{steps.get-versions.outputs.node}}
+
+      - name: Cache node modules
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: ${{ runner.OS }}-build-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.OS }}-build-${{ env.cache-name }}-
+            ${{ runner.OS }}-build-
+            ${{ runner.OS }}-
+      - run: rm .yarnclean
+
+      - run: |
+          yarn install --frozen-lockfile --ignore-scripts --ignore-optional --non-interactive --silent --production=false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Run ESLint
+        run: |
+          CHANGED_JS=$(git --no-pager diff --name-only ..origin/master | grep '^src\/.*\.ts$' | xargs ls -d 2>/dev/null | paste -sd " " -)
+          if [[ -z $(sed -e 's/[[:space:]]*$//' <<<${CHANGED_JS}) ]] || [[ "$CHANGED_JS" == "." ]];
+            then
+              yarn lint
+            else
+              node node_modules/eslint/bin/eslint $CHANGED_JS
+          fi
