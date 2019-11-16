@@ -21,18 +21,18 @@
     "@types/jest": "latest",
     "@typescript-eslint/eslint-plugin": "latest",
     "@typescript-eslint/parser": "latest",
-    "eslint": ">=6.6",
+    "eslint": "6.6.0",
     "eslint-config-prettier": "latest",
     "eslint-plugin-jest": "latest",
     "husky": "latest",
-    "jest": ">=25",
+    "jest": "25.0.0",
     "jest-extended": "latest",
     "lint-staged": "latest",
     "npm-package-json-lint": "latest",
     "prettier": "latest",
     "prettier-package-json": "latest",
     "ts-jest": "latest",
-    "typescript": ">=3.7"
+    "typescript": "3.7.2"
   },
   "keywords": [
     "____FIX_ME____"
