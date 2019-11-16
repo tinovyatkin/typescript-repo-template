@@ -1,35 +1,22 @@
 {
-  "name": "only",
-  "version": "1.0.0",
-  "description": "Creates an object composed of the picked object properties. In Typescript for ES2019+ environments.",
-  "main": "dist/index.js",
-  "scripts": {
-    "test": "jest",
-    "lint": "eslint --ext=ts ./src"
-  },
+  "name": "____FIX_ME____",
+  "description": "____FIX_ME____",
+  "license": "MIT",
+  "author": "Konstantin Vyatkin <tino@vtkn.io>",
+  "homepage": "https://github.com/tinovyatkin/____FIX_ME____#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tinovyatkin/only.git"
+    "url": "git+https://github.com/tinovyatkin/____FIX_ME____.git"
   },
-  "engines": {
-    "yarn": "latest"
-  },
-  "keywords": [
-    "utility",
-    "util",
-    "object",
-    "whitelist",
-    "lodash-modularized",
-    "lodash-es",
-    "pick",
-    "pickby"
-  ],
-  "author": "Konstantin Vyatkin <tino@vtkn.io>",
-  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tinovyatkin/only/issues"
+    "url": "https://github.com/tinovyatkin/____FIX_ME____/issues"
   },
-  "homepage": "https://github.com/tinovyatkin/only#readme",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "lint": "eslint --ext=ts ./src",
+    "test": "jest"
+  },
   "devDependencies": {
     "@types/jest": "latest",
     "@typescript-eslint/eslint-plugin": "latest",
@@ -46,5 +33,11 @@
     "prettier-package-json": "latest",
     "ts-jest": "latest",
     "typescript": ">=3.7"
+  },
+  "keywords": [
+    "____FIX_ME____"
+  ],
+  "engines": {
+    "yarn": ">=1.19"
   }
 }
