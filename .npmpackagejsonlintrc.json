@@ -1,6 +1,5 @@
 {
-  // see https://npmpackagejsonlint.org/docs/en/configuration
-
+  "@link": "https://npmpackagejsonlint.org/docs/en/configuration",
   "rules": {
     "require-author": "error",
     "require-description": "error",
@@ -9,8 +8,6 @@
     "require-name": "error",
     "require-repository": "error",
     "require-version": "error",
-    // "require-bugs": "error",
-    // "require-homepage": "error",
     "require-keywords": "error",
     "bin-type": "error",
     "config-type": "error",
@@ -31,20 +28,7 @@
     "scripts-type": "error",
     "version-type": "error",
     "valid-values-author": ["error", ["Konstantin Vyatkin <tino@vtkn.io>"]],
-    // "valid-values-private": ["error", [false]],
     "no-restricted-dependencies": ["error", ["lodash"]],
-    // "no-restricted-pre-release-dependencies": [
-    //   "error",
-    //   ["gulping-npm-package-json-lint"]
-    // ],
-    // "no-restricted-invalid-devDependencies": [
-    //   "error",
-    //   ["gulping-npm-package-json-lint"]
-    // ],
-    // "no-restricted-pre-release-devDependencies": [
-    //   "error",
-    //   ["gulping-npm-package-json-lint"]
-    // ],
     "name-format": "error",
     "version-format": "error"
   }

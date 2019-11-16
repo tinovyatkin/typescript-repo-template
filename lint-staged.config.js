@@ -11,7 +11,7 @@ module.exports = {
   '*.{yaml,yml}': ['yamllint', 'prettier --write', 'git add'],
   '*.{md,json}': ['prettier --write', 'git add'],
   '**/package.json': filenames => [
-    "[ -f 'yarn.lock' ] && yarn check --integrity",
+    'yarn check --integrity',
     ...filenames.map(file => `npmPkgJsonLint ${file}`),
     'prettier-package-json --write',
     'git add',

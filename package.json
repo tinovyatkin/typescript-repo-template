@@ -1,0 +1,50 @@
+{
+  "name": "only",
+  "version": "1.0.0",
+  "description": "Creates an object composed of the picked object properties. In Typescript for ES2019+ environments.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint --ext=ts ./src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tinovyatkin/only.git"
+  },
+  "engines": {
+    "yarn": "latest"
+  },
+  "keywords": [
+    "utility",
+    "util",
+    "object",
+    "whitelist",
+    "lodash-modularized",
+    "lodash-es",
+    "pick",
+    "pickby"
+  ],
+  "author": "Konstantin Vyatkin <tino@vtkn.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tinovyatkin/only/issues"
+  },
+  "homepage": "https://github.com/tinovyatkin/only#readme",
+  "devDependencies": {
+    "@types/jest": "latest",
+    "@typescript-eslint/eslint-plugin": "latest",
+    "@typescript-eslint/parser": "latest",
+    "eslint": ">=6.6",
+    "eslint-config-prettier": "latest",
+    "eslint-plugin-jest": "latest",
+    "husky": "latest",
+    "jest": ">=25",
+    "jest-extended": "latest",
+    "lint-staged": "latest",
+    "npm-package-json-lint": "latest",
+    "prettier": "latest",
+    "prettier-package-json": "latest",
+    "ts-jest": "latest",
+    "typescript": ">=3.7"
+  }
+}
