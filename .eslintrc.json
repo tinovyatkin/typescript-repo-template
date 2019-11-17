@@ -39,6 +39,7 @@
       },
       "rules": {
         "@typescript-eslint/no-unused-vars": "warn",
+        "@typescript-eslint/ban-ts-ignore": "off",
         "import/order": "off", // may interfere with mocking,
         "max-nested-callbacks": "off",
         "max-lines": "off"
