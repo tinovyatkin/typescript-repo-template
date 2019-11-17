@@ -19,14 +19,6 @@ jobs:
         with:
           fetch-depth: 1
 
-      - name: Get Node.JS version from package.json
-        id: get-versions
-        run: echo ::set-output name=node::$(jq -r .engines.node ./package.json)
-
-      - uses: actions/setup-node@v1
-        with:
-          node-version: ${{steps.get-versions.outputs.node}}
-
       - name: Cache node modules
         uses: actions/cache@v1
         with:
