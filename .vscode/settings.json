@@ -2,6 +2,7 @@
   "eslint.enable": true,
   // prevent watch task failures on lint errors
   "eslint.autoFixOnSave": true,
+  "eslint.validate": ["javascript", "typescript"],
   "editor.formatOnSave": true,
   // switch off default VSCode formatting rules
   "javascript.format.enable": false,

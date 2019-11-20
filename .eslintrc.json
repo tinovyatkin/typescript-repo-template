@@ -20,7 +20,9 @@
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
   },
-  "rules": {},
+  "rules": {
+    "@typescript-eslint/require-await": "off"
+  },
   "overrides": [
     {
       "files": "**/*.js",
