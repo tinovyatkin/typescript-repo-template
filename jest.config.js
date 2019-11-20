@@ -1,11 +1,15 @@
 module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'node',
-  collectCoverage: true,
   verbose: true,
+  collectCoverage: true,
   coverageReporters: ['text', 'json', 'cobertura', 'lcov'],
+  collectCoverageFrom: ['<rootDir>/src/**/*.ts?(x)'],
   moduleFileExtensions: ['ts', 'js'],
-  setupFilesAfterEnv: ['jest-extended'],
+  testMatch: [
+    '<rootDir>/**/__tests__/**/*.ts?(x)',
+    '<rootDir>/**/?(*.)+.test.ts?(x)',
+  ],
   watchPathIgnorePatterns: [
     '<rootDir>/node_modules/',
     '<rootDir>/.sonarlint/',

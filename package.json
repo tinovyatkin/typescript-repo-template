@@ -28,7 +28,6 @@
     "eslint-plugin-jest": "latest",
     "husky": "latest",
     "jest": "next",
-    "jest-extended": "latest",
     "lint-staged": "latest",
     "npm-package-json-lint": "latest",
     "prettier": "latest",
