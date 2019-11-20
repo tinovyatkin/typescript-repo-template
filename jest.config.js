@@ -1,4 +1,5 @@
 module.exports = {
+  clearMocks: true,
   preset: 'ts-jest',
   testEnvironment: 'node',
   verbose: true,
@@ -10,6 +11,7 @@ module.exports = {
     '<rootDir>/**/__tests__/**/*.ts?(x)',
     '<rootDir>/**/?(*.)+.test.ts?(x)',
   ],
+  testRunner: 'jest-circus/runner',
   watchPathIgnorePatterns: [
     '<rootDir>/node_modules/',
     '<rootDir>/.sonarlint/',

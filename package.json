@@ -28,6 +28,7 @@
     "eslint-plugin-jest": "latest",
     "husky": "latest",
     "jest": "next",
+    "jest-circus": "24.9.0",
     "lint-staged": "latest",
     "npm-package-json-lint": "latest",
     "prettier": "latest",
