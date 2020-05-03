@@ -15,7 +15,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macOS-latest]
-        node: [13.x, 12.x, 10.x]
+        node: [14.x, 12.x, 10.x]
         exclude:
           # On Windows, run tests with only the latest environments.
           - os: windows-latest
@@ -30,7 +30,7 @@ jobs:
 
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
         with:
           fetch-depth: 1
       - uses: actions/setup-node@v1
@@ -39,12 +39,6 @@ jobs:
       - run: yarn install --frozen-lockfile --ignore-optional --non-interactive --silent
       - run: node --expose-gc node_modules/jest/bin/jest --forceExit --bail --colors --logHeapUsage --maxWorkers=2 --ci
 
-      - name: Upload coverage to Codecov
-        # https://github.com/codecov/codecov-bash/blob/1044b7a243e0ea0c05ed43c2acd8b7bb7cef340c/codecov#L158
-        run: npx codecov
-          -f "./coverage/coverage-final.json"
-          -y "./.codecov.yml"
-          -b ${{ github.head_ref }}
-          -c ${{ github.event.after }}
-        env:
-          CODECOV_TOKEN: ${{secrets.CODECOV_TOKEN}}
+      - uses: codecov/codecov-action@v1
+        with:
+          file: ./coverage/coverage-final.json
