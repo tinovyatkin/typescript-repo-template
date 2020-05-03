@@ -80,5 +80,8 @@
       "fileMatch": [".npmpackagejsonlintrc.json"],
       "url": "http://json.schemastore.org/npmpackagejsonlintrc"
     }
-  ]
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
 }
