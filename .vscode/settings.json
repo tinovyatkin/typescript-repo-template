@@ -1,9 +1,10 @@
 {
   "eslint.enable": true,
   // prevent watch task failures on lint errors
-  "eslint.autoFixOnSave": true,
   "eslint.validate": ["javascript", "typescript"],
-  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
   // switch off default VSCode formatting rules
   "javascript.format.enable": false,
   "typescript.surveys.enabled": false,
@@ -80,8 +81,5 @@
       "fileMatch": [".npmpackagejsonlintrc.json"],
       "url": "http://json.schemastore.org/npmpackagejsonlintrc"
     }
-  ],
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  }
+  ]
 }
