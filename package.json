@@ -11,6 +11,10 @@
   "bugs": {
     "url": "https://github.com/tinovyatkin/____FIX_ME____/issues"
   },
+  "files": [
+    "dist/**/*.d.ts",
+    "dist/**/*.js"
+  ],
   "version": "1.0.0",
   "main": "dist/index.js",
   "scripts": {
