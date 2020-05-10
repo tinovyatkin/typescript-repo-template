@@ -34,7 +34,8 @@
     "prettier": "latest",
     "prettier-package-json": "latest",
     "ts-jest": "latest",
-    "typescript": "latest"
+    "typescript": "latest",
+    "weak-napi": "2.0.1"
   },
   "keywords": [
     "____FIX_ME____"
