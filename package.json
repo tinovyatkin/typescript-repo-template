@@ -30,6 +30,7 @@
     "eslint": "7.0.0",
     "eslint-config-prettier": "latest",
     "eslint-plugin-jest": "latest",
+    "eslint-plugin-node": "11.1.0",
     "husky": "latest",
     "jest": "26.0.1",
     "jest-circus": "26.0.1",
