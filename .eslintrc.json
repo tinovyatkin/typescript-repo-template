@@ -34,6 +34,11 @@
     ],
     "no-empty": ["error", { "allowEmptyCatch": true }]
   },
+  "settings": {
+    "node": {
+      "tryExtensions": [".js", ".json", ".ts"]
+    }
+  },
   "overrides": [
     {
       "files": "**/*.js",
